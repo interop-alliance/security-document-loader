@@ -18,6 +18,7 @@ import dccContext from '@digitalcredentials/dcc-context';
 import didContext from 'did-context';
 import ed25519Context from 'ed25519-signature-2020-context';
 import x25519Context from 'x25519-key-agreement-2020-context';
+import zcapContext from '@digitalbazaar/zcap-context';
 import { JsonLdDocumentLoader } from 'jsonld-document-loader';
 import obContext from '@digitalcredentials/open-badges-context';
 import { httpClient } from '@digitalcredentials/http-client';
@@ -126,6 +127,9 @@ export function securityLoader({ fetchRemoteContexts = false, useOBv3BetaContext
 
   // Status List 2021 Context (DEPRECATED)
   loader.addStatic(vcStatusListContext.CONTEXT_URL_V1, vcStatusListContext.CONTEXT_V1);
+
+  // zCap Context (Authorization Capabilities v0.3)
+  loader.addStatic(zcapContext.CONTEXT_URL, zcapContext.CONTEXT);
 
   // Open Badges v3 Contexts, includes OBv3 Beta, 3.0, 3.0.1, 3.0.2, etc.
   for (const [url, context] of obContext.contexts) {

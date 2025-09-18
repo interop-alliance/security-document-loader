@@ -29,6 +29,7 @@
     "@digitalbazaar/data-integrity-context": "^2.0.0",
     "@digitalbazaar/vc-bitstring-status-list-context": "^1.0.0",
     "@digitalbazaar/vc-status-list-context": "^3.0.1",
+    "@digitalbazaar/zcap-context": "^2.0.1",
     "@digitalcredentials/credentials-v2-context": "^1.0.0",
     "@digitalcredentials/crypto-ld": "^7.0.2",
     "@digitalcredentials/dcc-context": "^1.0.0",
