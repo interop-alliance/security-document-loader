@@ -1,7 +1,7 @@
 {
   "name": "@digitalcredentials/security-document-loader",
   "description": "A secure and convenient JSON-LD document loader for Node.js, browsers, and React Native.",
-  "version": "8.0.0",
+  "version": "9.0.0",
   "scripts": {
     "build-esm": "tsc -p tsconfig.esm.json",
     "build-types": "tsc -p tsconfig.types.json",

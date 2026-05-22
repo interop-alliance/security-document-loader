@@ -1,5 +1,9 @@
 # security-document-loader Changelog
 
+## 9.0.0 - 2026-05-22
+### Added
+- Add `@digitalbazaar/zcap-context`
+
 ## 8.0.0 - 2025-05-22
 ### Changed
 - **BREAKING**: updated @digitalcredentials/credentials-v2-context and 
