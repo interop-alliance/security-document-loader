@@ -9,12 +9,7 @@ import vc1Context from 'credentials-context';
 import vcStatusListContext from '@digitalbazaar/vc-status-list-context';
 import dataIntegrityContext from '@digitalbazaar/data-integrity-context';
 import * as Ed25519Multikey from '@digitalcredentials/ed25519-multikey';
-// import { Ed25519VerificationKey2020 }
-  // from '@digitalcredentials/ed25519-verification-key-2020';
-// import { X25519KeyAgreementKey2020 }
-  // from '@digitalcredentials/x25519-key-agreement-key-2020';
 import { CachedResolver } from '@digitalcredentials/did-io';
-import dccContext from '@digitalcredentials/dcc-context';
 import didContext from 'did-context';
 import ed25519Context from 'ed25519-signature-2020-context';
 import x25519Context from 'x25519-key-agreement-2020-context';
@@ -118,9 +113,6 @@ export function securityLoader({ fetchRemoteContexts = false, useOBv3BetaContext
   for (const [url, context] of dataIntegrityContext.contexts) {
     loader.addStatic(url, context)
   }
-
-  // DCC Context
-  loader.addStatic(dccContext.CONTEXT_URL_V1, dccContext.CONTEXT_V1);
 
   // Bitstring Status List Context
   loader.addStatic(vcBitstringStatusListContext.CONTEXT_URL, vcBitstringStatusListContext.CONTEXT);
