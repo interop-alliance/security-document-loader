@@ -1,5 +1,11 @@
 # security-document-loader Changelog
 
+## 9.0.1 - 
+
+### Changed
+- **BREAKING**: Forked from `@digitalcredentials/security-document-loader@v9.0.0`
+- **BREAKING**: Remove DCC context ()
+
 ## 9.0.0 - 2026-05-22
 ### Added
 - Add `@digitalbazaar/zcap-context`

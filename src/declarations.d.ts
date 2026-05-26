@@ -1,4 +1,3 @@
-declare module '@digitalcredentials/dcc-context';
 declare module '@digitalcredentials/did-io';
 declare module '@digitalcredentials/did-method-key';
 declare module '@digitalcredentials/vc';
