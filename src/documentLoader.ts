@@ -1,14 +1,14 @@
 /*!
  * Copyright (c) 2021 Interop Alliance and Dmitri Zagidulin. All rights reserved.
  */
-import * as didKey from '@digitalcredentials/did-method-key';
+import { driver } from '@interop/did-method-key';
 import * as didWeb from '@digitalcredentials/did-method-web';
 import * as vc2Context from '@digitalcredentials/credentials-v2-context';
 import * as vcBitstringStatusListContext from '@digitalbazaar/vc-bitstring-status-list-context';
 import vc1Context from 'credentials-context';
 import vcStatusListContext from '@digitalbazaar/vc-status-list-context';
 import dataIntegrityContext from '@digitalbazaar/data-integrity-context';
-import * as Ed25519Multikey from '@digitalcredentials/ed25519-multikey';
+import { Ed25519VerificationKey } from '@interop/ed25519-verification-key';
 import { CachedResolver } from '@digitalcredentials/did-io';
 import didContext from 'did-context';
 import ed25519Context from 'ed25519-signature-2020-context';
@@ -16,24 +16,21 @@ import x25519Context from 'x25519-key-agreement-2020-context';
 import zcapContext from '@digitalbazaar/zcap-context';
 import { JsonLdDocumentLoader } from 'jsonld-document-loader';
 import obContext from '@digitalcredentials/open-badges-context';
-import { httpClient } from '@digitalcredentials/http-client';
+import { httpClient } from '@interop/http-client';
 import { parseResponseBody } from './parseResponse.js';
 
 const resolver = new CachedResolver();
-const didKeyDriver = didKey.driver();
+const didKeyDriver = driver();
 const didWebDriver = didWeb.driver();
 resolver.use(didKeyDriver);
 resolver.use(didWebDriver);
 
 didWebDriver.use({
   multibaseMultikeyHeader: 'z6Mk',
-  fromMultibase: Ed25519Multikey.from
+  fromMultibase: Ed25519VerificationKey.from.bind(Ed25519VerificationKey)
 });
 
-didKeyDriver.use({
-  multibaseMultikeyHeader: 'z6Mk',
-  fromMultibase: Ed25519Multikey.from
-});
+didKeyDriver.use({ keyPairClass: Ed25519VerificationKey });
 
 export const httpClientHandler = {
   /**

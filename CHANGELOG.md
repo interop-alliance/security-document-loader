@@ -4,7 +4,8 @@
 
 ### Changed
 - **BREAKING**: Forked from `@digitalcredentials/security-document-loader@v9.0.0`
-- **BREAKING**: Remove DCC context ()
+- **BREAKING**: Remove DCC context (no longer used).
+- Switch to `@interop/http-client` fork.
 
 ## 9.0.0 - 2026-05-22
 ### Added
