@@ -2,14 +2,14 @@
  * Copyright (c) 2021 Interop Alliance and Dmitri Zagidulin. All rights reserved.
  */
 import { driver } from '@interop/did-method-key';
-import * as didWeb from '@digitalcredentials/did-method-web';
+import * as didWeb from '@interop/did-web-resolver';
 import * as vc2Context from '@digitalcredentials/credentials-v2-context';
 import * as vcBitstringStatusListContext from '@digitalbazaar/vc-bitstring-status-list-context';
 import vc1Context from 'credentials-context';
 import vcStatusListContext from '@digitalbazaar/vc-status-list-context';
 import dataIntegrityContext from '@digitalbazaar/data-integrity-context';
 import { Ed25519VerificationKey } from '@interop/ed25519-verification-key';
-import { CachedResolver } from '@digitalcredentials/did-io';
+import { CachedResolver } from '@interop/did-io';
 import didContext from 'did-context';
 import ed25519Context from 'ed25519-signature-2020-context';
 import x25519Context from 'x25519-key-agreement-2020-context';
@@ -22,13 +22,12 @@ import { parseResponseBody } from './parseResponse.js';
 const resolver = new CachedResolver();
 const didKeyDriver = driver();
 const didWebDriver = didWeb.driver();
-resolver.use(didKeyDriver);
-resolver.use(didWebDriver);
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+resolver.use(didKeyDriver as any);
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+resolver.use(didWebDriver as any);
 
-didWebDriver.use({
-  multibaseMultikeyHeader: 'z6Mk',
-  fromMultibase: Ed25519VerificationKey.from.bind(Ed25519VerificationKey)
-});
+didWebDriver.use({ keyPairClass: Ed25519VerificationKey });
 
 didKeyDriver.use({ keyPairClass: Ed25519VerificationKey });
 
