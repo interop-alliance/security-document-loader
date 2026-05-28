@@ -1,11 +1,11 @@
-# security-document-loader Changelog
+# @interop/security-document-loader Changelog
 
-## 9.0.1 - 
+## 9.0.1 -
 
 ### Changed
 - **BREAKING**: Forked from `@digitalcredentials/security-document-loader@v9.0.0`
 - **BREAKING**: Remove DCC context (no longer used).
-- Switch to `@interop/http-client` fork.
+- Switch to `@interop/http-client`, `@interop/did-web-resolver`, `@interop/did-method-key`
 
 ## 9.0.0 - 2026-05-22
 ### Added
@@ -13,7 +13,7 @@
 
 ## 8.0.0 - 2025-05-22
 ### Changed
-- **BREAKING**: updated @digitalcredentials/credentials-v2-context and 
+- **BREAKING**: updated @digitalcredentials/credentials-v2-context and
 digitalcredentials/open-badges-context to include latest OBv3.0.3 and VC DM 2.0
 contexts
 
@@ -43,7 +43,7 @@ contexts
 
 ## 4.0.0 - 2024-01-23
 ### Changed
-- **BREAKING**: Use the Typescript-enabled `@interop/did-web-resolver@4.0.0`, 
+- **BREAKING**: Use the Typescript-enabled `@interop/did-web-resolver@4.0.0`,
   which uses DigitalBazaar's version of `http-client`,
   and updated `@digitalcredentials/bnid@3.0.1`.
   Usage and API should remain unchanged, but bumping to major semver due to

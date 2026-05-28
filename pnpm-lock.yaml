@@ -26,9 +26,6 @@ importers:
       '@digitalcredentials/open-badges-context':
         specifier: ^3.0.0
         version: 3.0.0
-      '@digitalcredentials/x25519-key-agreement-key-2020':
-        specifier: ^3.0.0
-        version: 3.0.0
       '@interop/did-io':
         specifier: ^2.0.1
         version: 2.0.1
@@ -199,10 +196,6 @@ packages:
     resolution: {integrity: sha512-H+5O2QP5XJZuP8D4T2hZStxK3+ynu/yamvQKUTVNTiqAXeWshmEthSTMrX8aS5edgOtJjvdNUNuJ5mePW/DPcQ==}
     engines: {node: '>=18'}
 
-  '@digitalcredentials/base58-universal@1.0.1':
-    resolution: {integrity: sha512-1xKdJnfITMvrF/sCgwBx2C4p7qcNAARyIvrAOZGqIHmBaT/hAenpC8bf44qVY+UIMuCYP23kqpIfJQebQDThDQ==}
-    engines: {node: '>=12'}
-
   '@digitalcredentials/bnid@5.0.0':
     resolution: {integrity: sha512-AW9nUCXKyrVf1aio2AotUuT8iSRZ30WhT8aa3AbES8IDG7IE0nRo+AwF4wG2lH9gX8KWFrQ4IpzcWpNiHriA4w==}
     engines: {node: '>=18'}
@@ -221,10 +214,6 @@ packages:
   '@digitalcredentials/ssi@5.4.2':
     resolution: {integrity: sha512-/rNw47tbC8661tNzVBbKfmX6jaZT+NE7PhPkaFzHdMIzzY8knGotiPqp+8UjjWcQTkzXrqeu1AktRSAnEF+IFw==}
     engines: {node: '>=20.0'}
-
-  '@digitalcredentials/x25519-key-agreement-key-2020@3.0.0':
-    resolution: {integrity: sha512-mCh6eRh6opBZiEtAWZ3RvCGs6JP9QpN2/xPxncQIKBK9WBUxONgL1CEsTUTRcisGvWQrUcqVXRHQ0Tl6b8weSQ==}
-    engines: {node: '>=12'}
 
   '@emnapi/core@1.10.0':
     resolution: {integrity: sha512-yq6OkJ4p82CAfPl0u9mQebQHKPJkY7WrIuk205cTYnYe+k2Z8YBh11FrbRG/H6ihirqcacOgl2BIO8oyMQLeXw==}
@@ -563,9 +552,6 @@ packages:
   '@types/json-schema@7.0.15':
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
 
-  '@types/node@18.19.130':
-    resolution: {integrity: sha512-GRaXQx6jGfL8sKfaIDD6OupbIHBr9jv7Jnaml9tB7l4v068PAOXqfcujMMo5PhbIs6ggR1XODELqahT2R8v0fg==}
-
   '@types/node@24.12.4':
     resolution: {integrity: sha512-GUUEShf+PBCGW2KaXwcIt3Yk+e3pkKwWKb9GSyM9WQVE+ep2jzmHdGsHzu4wgcZy5fN9FBdVzjpBQsYlpfpgLA==}
 
@@ -825,10 +811,6 @@ packages:
     resolution: {integrity: sha512-uV2QOWP2nWzsy2aMp8aRibhi9dlzF5Hgh5SHaB9OiTGEyDTiJJyx0uy51QXdyWbtAHNua4XJzUKca3OzKUd3vA==}
     engines: {node: '>= 8'}
 
-  crypto-ld@6.0.0:
-    resolution: {integrity: sha512-XWL1LslqggNoaCI/m3I7HcvaSt9b2tYzdrXO+jHLUj9G1BvRfvV7ZTFDVY5nifYuIGAPdAGu7unPxLRustw3VA==}
-    engines: {node: '>=8.3.0'}
-
   crypto-ld@7.0.0:
     resolution: {integrity: sha512-RrXy6aB0TOhSiqsgavTQt1G8mKomKIaNLb2JZxj7A/Vi0EwmXguuBQoeiAvePfK6bDR3uQbqYnaLLs4irTWwgw==}
     engines: {node: '>=14'}
@@ -874,8 +856,8 @@ packages:
   ee-first@1.1.1:
     resolution: {integrity: sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==}
 
-  electron-to-chromium@1.5.361:
-    resolution: {integrity: sha512-Q6Hts7N9FnJc5LeGRINFvLhCI9xZmNtTDe5ZbcVezQz7cU4a8Aua3GH1b8J2XY8Al9PF+OCwYqhgsOOheMdvkA==}
+  electron-to-chromium@1.5.362:
+    resolution: {integrity: sha512-PUY2DrLvkjkUuWqq+KPL2iWshrJsZOcIojzRQ7eXFacc9dWga7MGMJAa15VbiejSZB1PAXaRLAiKgruHP8LB1w==}
 
   emoji-regex@8.0.0:
     resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}
@@ -1767,9 +1749,6 @@ packages:
     engines: {node: '>=14.17'}
     hasBin: true
 
-  undici-types@5.26.5:
-    resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==}
-
   undici-types@7.16.0:
     resolution: {integrity: sha512-Zz+aZWSj8LE6zoxD+xrjh4VfkIG8Ya6LvYkZqtUQGJPZjYl53ypCaUwWqo7eI0x66KBGeRo+mlBEkMSeSZ38Nw==}
 
@@ -2065,8 +2044,6 @@ snapshots:
 
   '@digitalbazaar/zcap-context@2.0.1': {}
 
-  '@digitalcredentials/base58-universal@1.0.1': {}
-
   '@digitalcredentials/bnid@5.0.0(react-native@0.85.3(@babel/core@7.29.7)(react@19.2.6))':
     dependencies:
       base-x: 5.0.1
@@ -2083,13 +2060,6 @@ snapshots:
   '@digitalcredentials/open-badges-context@3.0.0': {}
 
   '@digitalcredentials/ssi@5.4.2': {}
-
-  '@digitalcredentials/x25519-key-agreement-key-2020@3.0.0':
-    dependencies:
-      '@digitalcredentials/base58-universal': 1.0.1
-      '@noble/ed25519': 1.7.5
-      crypto-ld: 6.0.0
-      tweetnacl: 1.0.3
 
   '@emnapi/core@1.10.0':
     dependencies:
@@ -2205,7 +2175,7 @@ snapshots:
       '@jest/schemas': 29.6.3
       '@types/istanbul-lib-coverage': 2.0.6
       '@types/istanbul-reports': 3.0.4
-      '@types/node': 18.19.130
+      '@types/node': 24.12.4
       '@types/yargs': 17.0.35
       chalk: 4.1.2
 
@@ -2404,10 +2374,6 @@ snapshots:
       '@types/istanbul-lib-report': 3.0.3
 
   '@types/json-schema@7.0.15': {}
-
-  '@types/node@18.19.130':
-    dependencies:
-      undici-types: 5.26.5
 
   '@types/node@24.12.4':
     dependencies:
@@ -2635,7 +2601,7 @@ snapshots:
     dependencies:
       baseline-browser-mapping: 2.10.32
       caniuse-lite: 1.0.30001793
-      electron-to-chromium: 1.5.361
+      electron-to-chromium: 1.5.362
       node-releases: 2.0.46
       update-browserslist-db: 1.2.3(browserslist@4.28.2)
 
@@ -2658,7 +2624,7 @@ snapshots:
 
   chrome-launcher@0.15.2:
     dependencies:
-      '@types/node': 18.19.130
+      '@types/node': 24.12.4
       escape-string-regexp: 4.0.0
       is-wsl: 2.2.0
       lighthouse-logger: 1.4.2
@@ -2667,7 +2633,7 @@ snapshots:
 
   chromium-edge-launcher@0.3.0:
     dependencies:
-      '@types/node': 18.19.130
+      '@types/node': 24.12.4
       escape-string-regexp: 4.0.0
       is-wsl: 2.2.0
       lighthouse-logger: 1.4.2
@@ -2714,8 +2680,6 @@ snapshots:
       shebang-command: 2.0.0
       which: 2.0.2
 
-  crypto-ld@6.0.0: {}
-
   crypto-ld@7.0.0: {}
 
   debug@2.6.9:
@@ -2740,7 +2704,7 @@ snapshots:
 
   ee-first@1.1.1: {}
 
-  electron-to-chromium@1.5.361: {}
+  electron-to-chromium@1.5.362: {}
 
   emoji-regex@8.0.0: {}
 
@@ -3003,7 +2967,7 @@ snapshots:
   jest-util@29.7.0:
     dependencies:
       '@jest/types': 29.6.3
-      '@types/node': 18.19.130
+      '@types/node': 24.12.4
       chalk: 4.1.2
       ci-info: 3.9.0
       graceful-fs: 4.2.11
@@ -3020,7 +2984,7 @@ snapshots:
 
   jest-worker@29.7.0:
     dependencies:
-      '@types/node': 18.19.130
+      '@types/node': 24.12.4
       jest-util: 29.7.0
       merge-stream: 2.0.0
       supports-color: 8.1.1
@@ -3693,8 +3657,6 @@ snapshots:
       - supports-color
 
   typescript@5.9.3: {}
-
-  undici-types@5.26.5: {}
 
   undici-types@7.16.0: {}
 
