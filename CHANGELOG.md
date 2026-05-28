@@ -1,6 +1,6 @@
 # @interop/security-document-loader Changelog
 
-## 9.0.1 -
+## 9.0.1 - 2026-05-27
 
 ### Changed
 - **BREAKING**: Forked from `@digitalcredentials/security-document-loader@v9.0.0`
