@@ -1,7 +1,7 @@
-# JSON-LD Document Loader _(@digitalcredentials/security-document-loader)_
+# JSON-LD Document Loader _(interop/security-document-loader)_
 
-[![Build status](https://img.shields.io/github/actions/workflow/status/digitalcredentials/security-document-loader/main.yml?branch=main)](https://github.com/digitalcredentials/security-document-loader/actions?query=workflow%3A%22Node.js+CI%22)
-[![NPM Version](https://img.shields.io/npm/v/@digitalcredentials/security-document-loader.svg)](https://npm.im/@digitalcredentials/security-document-loader)
+[![Node.js CI](https://github.com/interop-alliance/security-document-loader/workflows/CI/badge.svg)](https://github.com/interop-alliance/security-document-loader/actions?query=workflow%3A%22CI%22)
+[![NPM Version](https://img.shields.io/npm/v/@interop/security-document-loader.svg)](https://npm.im/@interop/security-document-loader)
 
 > A secure and convenient JSON-LD document loader for Node.js, browsers, and React Native.
 
@@ -23,20 +23,16 @@ Included functionality:
 * DID resolver for `did:key` and `did:web`
 * Optional loading of arbitrary contexts from the web (see Usage).
 
-## Security
-
-TBD
-
 ## Install
 
-- Node.js 16+ is recommended.
+- Node.js 20+ is recommended.
 
 ### NPM
 
 To install via NPM:
 
 ```
-npm install @digitalcredentials/security-document-loader
+npm install @interop/security-document-loader
 ```
 
 ### Development
@@ -44,7 +40,7 @@ npm install @digitalcredentials/security-document-loader
 To install locally (for development):
 
 ```
-git clone https://github.com/digitalcredentials/security-document-loader.git
+git clone https://github.com/interop-alliance/security-document-loader.git
 cd security-document-loader
 npm install
 ```
@@ -54,7 +50,7 @@ npm install
 To get a default document loader (with the stock set of bundled contexts):
 
 ```js
-import { securityLoader } from '@digitalcredentials/security-document-loader'
+import { securityLoader } from '@interop/security-document-loader'
 
 const documentLoader = securityLoader().build()
 ```
@@ -62,7 +58,7 @@ const documentLoader = securityLoader().build()
 To add additional contexts:
 
 ```js
-import { securityLoader } from '@digitalcredentials/security-document-loader'
+import { securityLoader } from 'interop/security-document-loader'
 
 const loader = securityLoader()
 loader.addStatic('https://example.com/my-context/v1', contextObject)
@@ -82,12 +78,12 @@ const documentLoader = securityLoader({ fetchRemoteContexts: true }).build()
 
 Out of the box, this library supports loading the following documents:
 
-* Explicitly added URLs from static local caches (that is, ones that you 
+* Explicitly added URLs from static local caches (that is, ones that you
   explicitly add via `loader.addStatic`)
 * DID Documents using the `did:key` and `did:web` methods.
 
-Additionally, if your use case allows it, you can enable `fetchRemoteContexts`, 
-which will add support for URLs using the `http` and `https` protocols (see 
+Additionally, if your use case allows it, you can enable `fetchRemoteContexts`,
+which will add support for URLs using the `http` and `https` protocols (see
 previous section).
 
 #### Adding Custom Protocol Handlers
@@ -97,7 +93,7 @@ internal code to resolve those protocols (for example, you can fetch some
 handler:
 
 ```js
-import { securityLoader } from '@digitalcredentials/security-document-loader'
+import { securityLoader } from 'interop/security-document-loader'
 
 function getDocument (url) {
   // Some internal function that fetches or creates documents
