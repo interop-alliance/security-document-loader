@@ -22,9 +22,7 @@ import { parseResponseBody } from './parseResponse.js';
 const resolver = new CachedResolver();
 const didKeyDriver = driver();
 const didWebDriver = didWeb.driver();
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 resolver.use(didKeyDriver as any);
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 resolver.use(didWebDriver as any);
 
 didWebDriver.use({ keyPairClass: Ed25519VerificationKey });
@@ -38,7 +36,7 @@ export const httpClientHandler = {
    * @returns {Promise<{contextUrl: null, document, documentUrl}>} - Resolves
    *   with documentLoader document.
    */
-  async get(params: Record<string, string>): Promise<unknown> {
+  async get(params: { url: string }): Promise<unknown> {
     if(!params.url.startsWith('http')) {
       throw new Error('NotFoundError');
     }
@@ -49,8 +47,8 @@ export const httpClientHandler = {
         'Pragma': 'no-cache'
       };
       result = await httpClient.get(params.url, { headers, parseBody: false });
-    } catch(e: any) {
-      throw new Error(`NotFoundError loading "${params.url}": ${e.message}`);
+    } catch(e) {
+      throw new Error(`NotFoundError loading "${params.url}": ${(e as Error).message}`, { cause: e });
     }
 
     return parseResponseBody(result);

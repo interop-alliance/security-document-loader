@@ -1,12 +1,6 @@
-declare module '@digitalcredentials/did-io';
-declare module '@digitalcredentials/vc';
 declare module '@digitalbazaar/vc-bitstring-status-list-context';
-declare module '@digitalcredentials/vc-status-list';
 declare module '@digitalbazaar/vc-status-list-context';
-declare module '@digitalcredentials/did-method-web';
 declare module '@digitalbazaar/data-integrity-context';
-declare module '@digitalcredentials/ed25519-signature-2020';
-declare module '@digitalcredentials/x25519-key-agreement-key-2020';
 declare module 'credentials-context';
 declare module 'jsonld-document-loader';
 declare module 'did-context';
