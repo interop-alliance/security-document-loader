@@ -58,7 +58,7 @@ const documentLoader = securityLoader().build()
 To add additional contexts:
 
 ```js
-import { securityLoader } from 'interop/security-document-loader'
+import { securityLoader } from '@interop/security-document-loader'
 
 const loader = securityLoader()
 loader.addStatic('https://example.com/my-context/v1', contextObject)
@@ -93,7 +93,7 @@ internal code to resolve those protocols (for example, you can fetch some
 handler:
 
 ```js
-import { securityLoader } from 'interop/security-document-loader'
+import { securityLoader } from '@interop/security-document-loader'
 
 function getDocument (url) {
   // Some internal function that fetches or creates documents
