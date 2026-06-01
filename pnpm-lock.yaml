@@ -11,6 +11,9 @@ importers:
       '@digitalbazaar/data-integrity-context':
         specifier: ^2.0.1
         version: 2.0.1
+      '@digitalbazaar/multikey-context':
+        specifier: ^2.0.1
+        version: 2.0.1
       '@digitalbazaar/vc-bitstring-status-list-context':
         specifier: ^1.1.0
         version: 1.1.0
@@ -188,6 +191,10 @@ packages:
 
   '@digitalbazaar/data-integrity-context@2.0.1':
     resolution: {integrity: sha512-XpXUzId6ZIEaNq9R+Fv3LrArj1bRj0QX3yfYgxi2bGZGIMs8EkdwsQdzTq38cmHXBQz4DASVun7mBtwrEqjf3g==}
+    engines: {node: '>=18'}
+
+  '@digitalbazaar/multikey-context@2.0.1':
+    resolution: {integrity: sha512-fHuaJNWpHLZH20GQemS+iPUn7/GuZ62UGhpmD9aZuKvN62lrPTeBK1V6C1BvfdIIWRsCqa1CUda+PDZa6d6X1A==}
     engines: {node: '>=18'}
 
   '@digitalbazaar/vc-bitstring-status-list-context@1.1.0':
@@ -2049,6 +2056,8 @@ snapshots:
   '@bcoe/v8-coverage@1.0.2': {}
 
   '@digitalbazaar/data-integrity-context@2.0.1': {}
+
+  '@digitalbazaar/multikey-context@2.0.1': {}
 
   '@digitalbazaar/vc-bitstring-status-list-context@1.1.0': {}
 

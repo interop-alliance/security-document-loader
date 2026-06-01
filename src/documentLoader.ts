@@ -16,6 +16,7 @@ import x25519Context from 'x25519-key-agreement-2020-context'
 import zcapContext from '@digitalbazaar/zcap-context'
 import { JsonLdDocumentLoader } from 'jsonld-document-loader'
 import obContext from '@digitalcredentials/open-badges-context'
+import multikeyContext from '@digitalbazaar/multikey-context'
 import aesContext from 'aes-key-wrapping-2019-context'
 import hmacContext from 'sha256-hmac-key-2019-context'
 import { httpClient } from '@interop/http-client'
@@ -123,6 +124,9 @@ export function securityLoader({
 
   // zCap Context (Authorization Capabilities v0.3)
   loader.addStatic(zcapContext.CONTEXT_URL, zcapContext.CONTEXT)
+
+  // Multikey Context
+  loader.addStatic(multikeyContext.CONTEXT_URL, multikeyContext.CONTEXT)
 
   // AES Key Wrapping 2019 Context
   loader.addStatic(

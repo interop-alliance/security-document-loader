@@ -1,5 +1,10 @@
 # @interop/security-document-loader Changelog
 
+## 9.2.0 - TBD
+
+### Added
+- Add `@digitalbazaar/multikey-context`
+
 ## 9.1.0 - 2026-06-01
 
 ### Added
