@@ -12,7 +12,7 @@ describe('documentLoader', () => {
     const documentLoader = loader.build()
 
     const result = await documentLoader('https://example.com/my-context/v1')
-    expect(result.document).toBe(contextObject)
+    expect(result.document).toStrictEqual(contextObject)
   })
 
   it('should load a status VC from web', async () => {
@@ -36,11 +36,12 @@ describe('documentLoader', () => {
 
   it('should load a did:web document from web', async () => {
     const documentLoader = securityLoader({ fetchRemoteContexts: true }).build()
-    const url =
-      'https://digitalcredentials.github.io/dcc-did-web/did.json'
+    const url = 'https://digitalcredentials.github.io/dcc-did-web/did.json'
     const result = await documentLoader(url)
     expect(result.document).toBeDefined()
-    expect(result.document.assertionMethod.type === 'Ed25519VerificationKey2020')
+    expect(
+      result.document.assertionMethod.type === 'Ed25519VerificationKey2020'
+    )
   })
 
   it('should load a multikey did:web document from web', async () => {

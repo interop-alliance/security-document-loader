@@ -1,5 +1,13 @@
 # @interop/security-document-loader Changelog
 
+## 9.1.0 - TBD
+
+### Added
+- Add `aes-key-wrapping-2019-context` and `sha256-hmac-key-2019-context`
+
+### Changed
+- Use loader-related types from `@interop/data-integrity-core`
+
 ## 9.0.1-9.0.2 - 2026-05-27
 
 ### Changed
