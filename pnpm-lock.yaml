@@ -33,17 +33,17 @@ importers:
         specifier: ^6.1.0
         version: 6.1.0
       '@interop/did-io':
-        specifier: ^4.0.0
-        version: 4.0.0
+        specifier: ^4.0.1
+        version: 4.0.1
       '@interop/did-method-key':
-        specifier: ^7.0.0
-        version: 7.0.0
+        specifier: ^7.1.0
+        version: 7.1.0
       '@interop/did-web-resolver':
-        specifier: ^6.0.0
-        version: 6.0.0(react-native@0.85.3(@babel/core@7.29.7)(react@19.2.6))
+        specifier: ^6.1.0
+        version: 6.1.0(react-native@0.85.3(@babel/core@7.29.7)(react@19.2.6))
       '@interop/ed25519-verification-key':
-        specifier: ^7.0.0
-        version: 7.0.0
+        specifier: ^7.0.1
+        version: 7.0.1
       '@interop/http-client':
         specifier: ^1.0.3
         version: 1.0.3
@@ -223,10 +223,6 @@ packages:
   '@digitalcredentials/open-badges-context@3.0.0':
     resolution: {integrity: sha512-pyXirpq29gy+NIaTBozDEm7nk1Oh8Yqie2WR0JuIqRX0ePCbiFeMv2uPEP3TXzyh1Jz++28fD+qjNojlhUmiIw==}
 
-  '@digitalcredentials/ssi@5.4.2':
-    resolution: {integrity: sha512-/rNw47tbC8661tNzVBbKfmX6jaZT+NE7PhPkaFzHdMIzzY8knGotiPqp+8UjjWcQTkzXrqeu1AktRSAnEF+IFw==}
-    engines: {node: '>=20.0'}
-
   '@emnapi/core@1.10.0':
     resolution: {integrity: sha512-yq6OkJ4p82CAfPl0u9mQebQHKPJkY7WrIuk205cTYnYe+k2Z8YBh11FrbRG/H6ihirqcacOgl2BIO8oyMQLeXw==}
 
@@ -299,24 +295,20 @@ packages:
     resolution: {integrity: sha512-kxm+1pfN1f9gxAxUdxeq0zhq1H54fTJQhpWGc13OD6CAjUWm+d36+fQFkA+uC63/hF9R9vVUbjKqwSiC3/kyqg==}
     engines: {node: '>=24.0'}
 
-  '@interop/did-io@2.0.1':
-    resolution: {integrity: sha512-L70N0ra0/7SkZx3xw/CF/UOMbl0qATpm99ybacLhbOm9MlTbQGLgw+1h+YKHsVf81uTvaxHa8tbtA5fnM62UQw==}
+  '@interop/did-io@4.0.1':
+    resolution: {integrity: sha512-wr1Zupmt/x8cQXJAXEa0ziHwjkEGC/KrtkyIg6emprA/eUGe/fULOW8TFArXXsL7vRQSX1IllQX0QcbQuKFuxg==}
     engines: {node: '>=24.0'}
 
-  '@interop/did-io@4.0.0':
-    resolution: {integrity: sha512-ZEiaUEE721+mYopd0FCi68+3N6/baPsDhIpryb13DAtcWrixk+Goh5/dyHpdn492rjPZOp4BukxCCHL149To+Q==}
+  '@interop/did-method-key@7.1.0':
+    resolution: {integrity: sha512-YPrJF08eNnLZC03YuBdW8wI5JY7FayeVlCrqcKqYdqlMugejCjsUOcTRBTaIY6q84QneWu4RuH5UttLq/STvJA==}
     engines: {node: '>=24.0'}
 
-  '@interop/did-method-key@7.0.0':
-    resolution: {integrity: sha512-/jkfBFUhB2v+naggozPwvl68oVxI9OZjUmAu04mdMQBR1WuBq8tN6UkEp/rkn3b0WPbyY1YZtcApjE2sgTIVlg==}
+  '@interop/did-web-resolver@6.1.0':
+    resolution: {integrity: sha512-MRt2F3S0uzDETJYEjE7GIo3Go7nY8sIdjHRkanzmOpxp62fDbY9+Olqgayv2k0HpZLxjIBSwM5JBFjG87zWpug==}
     engines: {node: '>=24.0'}
 
-  '@interop/did-web-resolver@6.0.0':
-    resolution: {integrity: sha512-mB3GVw2ayZup0n3/8GEkUEorR0vYESgcmJKRJUZHz47op9akgQkRrgnQZ+A/FKYHBBtxXrfhxSs2bbasmTZnog==}
-    engines: {node: '>=24.0'}
-
-  '@interop/ed25519-verification-key@7.0.0':
-    resolution: {integrity: sha512-DMXmxbxODFCw6h17N7VS9jmpQ3aq5yEurLD0B8mKK6TY7r6CfD7oaEdhTEQGqQNU1W2g2lO5ax9lwnJpiLts0A==}
+  '@interop/ed25519-verification-key@7.0.1':
+    resolution: {integrity: sha512-CqCJlNaBMmj3sPqo1291aAObKQlJINjUnTur2aGS6rFBLWtsUQCqPxAiSLn1HythmwuB7x+al6bRnmt7ZCAAEg==}
     engines: {node: '>=20'}
 
   '@interop/http-client@1.0.3':
@@ -2083,8 +2075,6 @@ snapshots:
 
   '@digitalcredentials/open-badges-context@3.0.0': {}
 
-  '@digitalcredentials/ssi@5.4.2': {}
-
   '@emnapi/core@1.10.0':
     dependencies:
       '@emnapi/wasi-threads': 1.2.1
@@ -2153,33 +2143,29 @@ snapshots:
 
   '@interop/data-integrity-core@6.1.0': {}
 
-  '@interop/did-io@2.0.1':
-    dependencies:
-      '@digitalcredentials/ssi': 5.4.2
-      '@interop/lru-memoize': 4.0.2
-
-  '@interop/did-io@4.0.0':
+  '@interop/did-io@4.0.1':
     dependencies:
       '@interop/data-integrity-core': 6.1.0
       '@interop/lru-memoize': 4.0.2
 
-  '@interop/did-method-key@7.0.0':
+  '@interop/did-method-key@7.1.0':
     dependencies:
       '@digitalbazaar/x25519-key-agreement-key-2020': 3.0.1
       '@interop/data-integrity-core': 6.1.0
-      '@interop/did-io': 4.0.0
-      '@interop/ed25519-verification-key': 7.0.0
+      '@interop/did-io': 4.0.1
+      '@interop/ed25519-verification-key': 7.0.1
 
-  '@interop/did-web-resolver@6.0.0(react-native@0.85.3(@babel/core@7.29.7)(react@19.2.6))':
+  '@interop/did-web-resolver@6.1.0(react-native@0.85.3(@babel/core@7.29.7)(react@19.2.6))':
     dependencies:
       '@digitalcredentials/bnid': 5.0.0(react-native@0.85.3(@babel/core@7.29.7)(react@19.2.6))
-      '@interop/did-io': 2.0.1
+      '@interop/data-integrity-core': 6.1.0
+      '@interop/did-io': 4.0.1
       '@interop/http-client': 1.0.3
       did-context: 3.1.1
     transitivePeerDependencies:
       - react-native
 
-  '@interop/ed25519-verification-key@7.0.0':
+  '@interop/ed25519-verification-key@7.0.1':
     dependencies:
       '@interop/data-integrity-core': 6.1.0
       '@noble/ed25519': 3.1.0
