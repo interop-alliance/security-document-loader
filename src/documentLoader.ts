@@ -26,8 +26,8 @@ import { parseResponseBody } from './parseResponse.js'
 const resolver = new CachedResolver()
 const didKeyDriver = driver()
 const didWebDriver = didWeb.driver()
-resolver.use(didKeyDriver as any)
-resolver.use(didWebDriver as any)
+resolver.use(didKeyDriver)
+resolver.use(didWebDriver)
 
 didWebDriver.use({ keyPairClass: Ed25519VerificationKey })
 
