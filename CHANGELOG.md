@@ -1,5 +1,11 @@
 # @interop/security-document-loader Changelog
 
+## 9.2.2 - 2026-06-06
+
+### Added
+
+- Add default export to `package.json`.
+
 ## 9.2.1 - 2026-06-01
 
 ### Changed
