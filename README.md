@@ -87,6 +87,27 @@ loader.addStatic('https://example.com/my-context/v1', contextObject)
 const documentLoader = loader.build()
 ```
 
+### React Native
+
+This library caches documents via its `jsonld-document-loader` dependency, which
+calls the global [`structuredClone`][]. React Native's Hermes engine does **not**
+provide `structuredClone`, so calling `.build()` (or `addStatic`) will throw
+`ReferenceError: Property 'structuredClone' doesn't exist` unless you install a
+shim before this loader is used (e.g. in your app's entry/`shim.js`):
+
+```js
+if (typeof structuredClone === 'undefined') {
+  // Sufficient for JSON-LD context/DID documents, which are plain JSON.
+  globalThis.structuredClone = (value) => JSON.parse(JSON.stringify(value))
+}
+```
+
+If you need full structured-clone semantics (`Date`/`Map`/`Set`/typed arrays),
+use a faithful polyfill such as [`@ungap/structured-clone`][] instead.
+
+[`structuredClone`]: https://developer.mozilla.org/en-US/docs/Web/API/structuredClone
+[`@ungap/structured-clone`]: https://www.npmjs.com/package/@ungap/structured-clone
+
 ### Fetching From the Web
 
 To enable fetching arbitrary contexts from the web (not recommended, if you can
