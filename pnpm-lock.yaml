@@ -41,6 +41,9 @@ importers:
       '@interop/did-web-resolver':
         specifier: ^6.2.1
         version: 6.2.1
+      '@interop/ecdsa-multikey':
+        specifier: ^2.3.0
+        version: 2.3.0
       '@interop/ed25519-verification-key':
         specifier: ^8.0.0
         version: 8.0.0
@@ -256,6 +259,10 @@ packages:
 
   '@interop/did-web-resolver@6.2.1':
     resolution: {integrity: sha512-v4qmJ0mFFNIrfrWCa2JgQOYNColBTH/IYLaONsbFpZmefLQodp4G+5troWigZAPncsnI31qucThf2jVXGS8MKg==}
+    engines: {node: '>=24.0'}
+
+  '@interop/ecdsa-multikey@2.3.0':
+    resolution: {integrity: sha512-C4Z+V5Y4/WG2AlQ+McbKJs/bXXJUR44YI2ooAtQ+ORh2zCVRLq+JyCusUxCxss1lIpappZHfOPJy31a/1f6xDQ==}
     engines: {node: '>=24.0'}
 
   '@interop/ed25519-verification-key@8.0.0':
@@ -1308,6 +1315,11 @@ snapshots:
       did-context: 3.1.1
     transitivePeerDependencies:
       - react-native-get-random-values
+
+  '@interop/ecdsa-multikey@2.3.0':
+    dependencies:
+      '@interop/data-integrity-core': 7.0.0
+      '@scure/base': 2.2.0
 
   '@interop/ed25519-verification-key@8.0.0':
     dependencies:

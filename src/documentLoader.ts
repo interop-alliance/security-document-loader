@@ -9,6 +9,8 @@ import vc1Context from 'credentials-context'
 import vcStatusListContext from '@digitalbazaar/vc-status-list-context'
 import dataIntegrityContext from '@digitalbazaar/data-integrity-context'
 import { Ed25519VerificationKey } from '@interop/ed25519-verification-key'
+import * as EcdsaMultikey from '@interop/ecdsa-multikey'
+import { ECDSA_MULTIBASE_HEADERS } from '@interop/ecdsa-multikey'
 import { CachedResolver } from '@interop/did-io'
 import didContext from 'did-context'
 import ed25519Context from 'ed25519-signature-2020-context'
@@ -23,6 +25,34 @@ import { httpClient } from '@interop/http-client'
 import type { IDocumentLoader } from '@interop/data-integrity-core/loader'
 import { parseResponseBody } from './parseResponse.js'
 
+/**
+ * Registers the standard set of `did:key` verification suites on a did:key
+ * driver: Ed25519 (`z6Mk`) and ECDSA P-256 / P-384 / P-521 (`zDna` / `z82L` /
+ * `z2J9`). Exported as the single source of truth for this header set so other
+ * packages (e.g. `@interop/verifier-core`, which builds its own did:key driver)
+ * register the same suites and cannot drift. The lower-level
+ * `multibaseMultikeyHeader` / `fromMultibase` form is used because ECDSA spans
+ * three headers (one per curve), which the single-header `keyPairClass` form
+ * cannot express.
+ *
+ * @param didKeyDriver {ReturnType<typeof driver>}   the did:key driver to
+ *   register the suites on
+ */
+export function registerDefaultDidKeyHeaders(
+  didKeyDriver: ReturnType<typeof driver>
+): void {
+  didKeyDriver.use({
+    multibaseMultikeyHeader: 'z6Mk',
+    fromMultibase: Ed25519VerificationKey.from
+  })
+  for (const header of ECDSA_MULTIBASE_HEADERS) {
+    didKeyDriver.use({
+      multibaseMultikeyHeader: header,
+      fromMultibase: EcdsaMultikey.from
+    })
+  }
+}
+
 const resolver = new CachedResolver()
 const didKeyDriver = driver()
 const didWebDriver = didWeb.driver()
@@ -31,7 +61,7 @@ resolver.use(didWebDriver)
 
 didWebDriver.use({ keyPairClass: Ed25519VerificationKey })
 
-didKeyDriver.use({ keyPairClass: Ed25519VerificationKey })
+registerDefaultDidKeyHeaders(didKeyDriver)
 
 export const httpClientHandler = {
   /**
