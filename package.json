@@ -12,7 +12,7 @@
     "lint": "eslint src test",
     "prepare": "pnpm run build",
     "rebuild": "pnpm run clear && pnpm run build",
-    "test": "pnpm run lint && pnpm run test-node && pnpm run test-browser",
+    "test": "pnpm run fix && pnpm run test-node && pnpm run test-browser",
     "test-browser": "playwright test",
     "test-node": "vitest run",
     "test-coverage": "vitest run --coverage"
@@ -46,6 +46,7 @@
     "@interop/did-io": "^4.0.4",
     "@interop/did-method-key": "^7.3.1",
     "@interop/did-web-resolver": "^6.2.1",
+    "@interop/ecdsa-multikey": "^2.3.0",
     "@interop/ed25519-verification-key": "^8.0.0",
     "@interop/http-client": "^1.0.3",
     "aes-key-wrapping-2019-context": "^1.0.3",

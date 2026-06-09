@@ -1,5 +1,18 @@
 # @interop/security-document-loader Changelog
 
+## 9.3.0 - TBD
+
+### Added
+
+- Register ECDSA (`P-256` / `P-384` / `P-521`) verification suites on the
+  built-in `did:key` resolver, alongside Ed25519, so the document loader can
+  resolve ECDSA `did:key` verification methods (e.g. for verifying
+  `ecdsa-rdfc-2019` proofs). Adds `@interop/ecdsa-multikey` as a dependency.
+- Export `registerDefaultDidKeyHeaders(didKeyDriver)`, the single source of
+  truth for the standard `did:key` header set (Ed25519 + ECDSA), so consumers
+  that build their own `did:key` driver (e.g. `@interop/verifier-core`) can
+  register the same suites and stay in sync.
+
 ## 9.2.3 - 2026-06-09
 
 ### Changed

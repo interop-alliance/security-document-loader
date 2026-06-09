@@ -1,4 +1,6 @@
 import { describe, it, expect } from 'vitest'
+import { driver } from '@interop/did-method-key'
+import * as EcdsaMultikey from '@interop/ecdsa-multikey'
 import { httpClientHandler, securityLoader } from '../../src/index.js'
 
 describe('documentLoader', () => {
@@ -13,6 +15,22 @@ describe('documentLoader', () => {
 
     const result = await documentLoader('https://example.com/my-context/v1')
     expect(result.document).toStrictEqual(contextObject)
+  })
+
+  it('resolves an ecdsa did:key verification method', async () => {
+    // Mint an ECDSA P-256 did:key, then resolve its verification method id
+    // through the loader. This is offline (no fetchRemoteContexts) and fails
+    // unless the did:key driver knows the ECDSA multibase header (`zDna`).
+    const keyPair = await EcdsaMultikey.generate({ curve: 'P-256' })
+    const { didDocument } = await driver().fromKeyPair({
+      verificationKeyPair: keyPair
+    })
+    const verificationMethodId = (didDocument.assertionMethod as string[])[0]
+
+    const documentLoader = securityLoader().build()
+    const { document } = await documentLoader(verificationMethodId)
+    expect(document.id).toBe(verificationMethodId)
+    expect(document.type).toBe('Multikey')
   })
 
   it('should load a status VC from web', async () => {
