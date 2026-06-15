@@ -53,15 +53,31 @@ export function registerDefaultDidKeyHeaders(
   }
 }
 
-const resolver = new CachedResolver()
-const didKeyDriver = driver()
-const didWebDriver = didWeb.driver()
-resolver.use(didKeyDriver)
-resolver.use(didWebDriver)
+/**
+ * Builds the default DID resolver: a `CachedResolver` preloaded with the
+ * built-in `did:key` and `did:web` drivers (the latter using the Ed25519
+ * verification-key suite), and the standard `did:key` header set. Exported so
+ * consumers that need additional DID methods (e.g. `did:webvh`) can start from
+ * the default set, `.use()` their own driver, and pass the result to
+ * `securityLoader({ didResolver })` -- keeping method-specific dependencies out
+ * of this package.
+ *
+ * @returns {CachedResolver}
+ */
+export function createDefaultDidResolver(): CachedResolver {
+  const resolver = new CachedResolver()
+  const didKeyDriver = driver()
+  const didWebDriver = didWeb.driver()
+  resolver.use(didKeyDriver)
+  resolver.use(didWebDriver)
 
-didWebDriver.use({ keyPairClass: Ed25519VerificationKey })
+  didWebDriver.use({ keyPairClass: Ed25519VerificationKey })
 
-registerDefaultDidKeyHeaders(didKeyDriver)
+  registerDefaultDidKeyHeaders(didKeyDriver)
+  return resolver
+}
+
+const defaultResolver = createDefaultDidResolver()
 
 export const httpClientHandler = {
   /**
@@ -103,11 +119,13 @@ declare class IJsonLdDocumentLoader {
 interface SecurityLoaderParams {
   fetchRemoteContexts?: boolean
   useOBv3BetaContext?: boolean
+  didResolver?: CachedResolver
 }
 
 export function securityLoader({
   fetchRemoteContexts = false,
-  useOBv3BetaContext = false
+  useOBv3BetaContext = false,
+  didResolver = defaultResolver
 }: SecurityLoaderParams = {}): IJsonLdDocumentLoader {
   const loader: IJsonLdDocumentLoader = new JsonLdDocumentLoader()
 
@@ -183,7 +201,7 @@ export function securityLoader({
     )
   }
 
-  loader.setDidResolver(resolver)
+  loader.setDidResolver(didResolver)
 
   // Enable loading of arbitrary contexts from web
   if (fetchRemoteContexts) {
