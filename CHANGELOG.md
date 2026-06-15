@@ -1,5 +1,19 @@
 # @interop/security-document-loader Changelog
 
+## 9.4.0 - TBD
+
+### Added
+
+- `securityLoader()` now accepts an optional `didResolver` to override the
+  built-in DID resolver, so consumers can resolve additional DID methods (e.g.
+  `did:webvh`) without this package taking on their method-specific
+  dependencies. Defaults to the built-in `did:key` + `did:web` resolver, so
+  existing zero-argument calls are unaffected.
+- Export `createDefaultDidResolver()`, the single source of truth for the
+  built-in DID driver set (`did:key` + `did:web`), so consumers can start from
+  the defaults, register their own driver, and pass the result back in via
+  `securityLoader({ didResolver })`.
+
 ## 9.3.1 - 2026-06-13
 
 ### Changed

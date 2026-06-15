@@ -1,7 +1,11 @@
 import { describe, it, expect } from 'vitest'
 import { driver } from '@interop/did-method-key'
 import * as EcdsaMultikey from '@interop/ecdsa-multikey'
-import { httpClientHandler, securityLoader } from '../../src/index.js'
+import {
+  createDefaultDidResolver,
+  httpClientHandler,
+  securityLoader
+} from '../../src/index.js'
 
 describe('documentLoader', () => {
   it('should load a document', async () => {
@@ -87,5 +91,38 @@ describe('documentLoader', () => {
     expect(legacyDocument['@context'].OpenBadgeCredential['@id']).toBe(
       'https://imsglobal.github.io/openbadges-specification/ob_v3p0.html#OpenBadgeCredential'
     )
+  })
+
+  it('resolves via a custom driver added to an injected didResolver', async () => {
+    // Start from the default driver set, register a stub driver for a custom
+    // method, and inject it. Resolving `did:example:...` proves the loader uses
+    // the injected resolver rather than the built-in singleton.
+    const exampleDocument = { id: 'did:example:123', type: 'Custom' }
+    const resolver = createDefaultDidResolver()
+    resolver.use({
+      method: 'example',
+      async get() {
+        return exampleDocument
+      }
+    })
+
+    const documentLoader = securityLoader({ didResolver: resolver }).build()
+    const { document } = await documentLoader('did:example:123')
+    expect(document).toStrictEqual(exampleDocument)
+  })
+
+  it('still resolves the default did:key method through an injected resolver', async () => {
+    // A resolver from createDefaultDidResolver() retains did:key support.
+    const keyPair = await EcdsaMultikey.generate({ curve: 'P-256' })
+    const { didDocument } = await driver().fromKeyPair({
+      verificationKeyPair: keyPair
+    })
+    const verificationMethodId = (didDocument.assertionMethod as string[])[0]
+
+    const documentLoader = securityLoader({
+      didResolver: createDefaultDidResolver()
+    }).build()
+    const { document } = await documentLoader(verificationMethodId)
+    expect(document.id).toBe(verificationMethodId)
   })
 })
