@@ -30,8 +30,8 @@ importers:
         specifier: ^3.0.0
         version: 3.0.0
       '@interop/data-integrity-core':
-        specifier: ^8.0.0
-        version: 8.0.0
+        specifier: ^8.1.0
+        version: 8.1.0
       '@interop/did-io':
         specifier: ^4.0.5
         version: 4.0.5
@@ -42,8 +42,8 @@ importers:
         specifier: ^6.2.2
         version: 6.2.2
       '@interop/ecdsa-multikey':
-        specifier: ^2.3.0
-        version: 2.3.0
+        specifier: ^2.3.1
+        version: 2.3.1
       '@interop/ed25519-verification-key':
         specifier: ^8.0.0
         version: 8.0.0
@@ -253,6 +253,10 @@ packages:
     resolution: {integrity: sha512-yXeF0JIeKf6VPqEEUCI9o2Rzh6+UMuOJeGdy+HClpwXxYIvlyOVJ7EfERqCjKwiMU7tm+rgWIbGLAi6swsRIgg==}
     engines: {node: '>=24.0'}
 
+  '@interop/data-integrity-core@8.1.0':
+    resolution: {integrity: sha512-85NyTH7UhFtFfgnK0J6d/Y/LIMXY8TzE2rMwkOugfrzbgaxVO6YFTkmaNUqnpM4EolJR1t4FN3Xvu69OgXRf/g==}
+    engines: {node: '>=24.0'}
+
   '@interop/did-io@4.0.5':
     resolution: {integrity: sha512-J3EUJsU1RtqVe1TEFQ2pyg4W5ZoCZ1UD4Z/4piLrKkuKQynLFsPga+EI/0niFPp7JmEjOvAsxu0h2eqOTVmkAw==}
     engines: {node: '>=24.0'}
@@ -265,8 +269,8 @@ packages:
     resolution: {integrity: sha512-ViVu+hy2yz4zd+e7WY/tiibT0D+8bvaTiiVWpP+5xyUX8ACQLoVJEtEoPQOBdIp7ZPP7QiXlS7mjvGLH7/BKdw==}
     engines: {node: '>=24.0'}
 
-  '@interop/ecdsa-multikey@2.3.0':
-    resolution: {integrity: sha512-C4Z+V5Y4/WG2AlQ+McbKJs/bXXJUR44YI2ooAtQ+ORh2zCVRLq+JyCusUxCxss1lIpappZHfOPJy31a/1f6xDQ==}
+  '@interop/ecdsa-multikey@2.3.1':
+    resolution: {integrity: sha512-OJ1WWuL2+c00hmNb7RRmtlcAsuvQVTUSLadEr9rxbVXzSejwffYyqpLApbhykoHEJn4cANlmkWKa7PfAWhO1vg==}
     engines: {node: '>=24.0'}
 
   '@interop/ed25519-verification-key@8.0.0':
@@ -1298,6 +1302,8 @@ snapshots:
 
   '@interop/data-integrity-core@8.0.0': {}
 
+  '@interop/data-integrity-core@8.1.0': {}
+
   '@interop/did-io@4.0.5':
     dependencies:
       '@interop/data-integrity-core': 8.0.0
@@ -1322,9 +1328,9 @@ snapshots:
     transitivePeerDependencies:
       - react-native-get-random-values
 
-  '@interop/ecdsa-multikey@2.3.0':
+  '@interop/ecdsa-multikey@2.3.1':
     dependencies:
-      '@interop/data-integrity-core': 7.0.0
+      '@interop/data-integrity-core': 8.0.0
       '@scure/base': 2.2.0
 
   '@interop/ed25519-verification-key@8.0.0':
