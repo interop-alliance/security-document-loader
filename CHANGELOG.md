@@ -1,5 +1,11 @@
 # @interop/security-document-loader Changelog
 
+## 9.4.1 - 2026-06-28
+
+### Fixed
+
+- Update to latest `@interop/http-client@1.0.4` and related.
+
 ## 9.4.0 - 2026-06-15
 
 ### Added
