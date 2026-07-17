@@ -1,5 +1,10 @@
 # @interop/security-document-loader Changelog
 
+## 9.4.2 - 2026-07
+
+### Changed
+- Update to `@interop/data-integrity-core@8.3.0` and related.
+
 ## 9.4.1 - 2026-06-28
 
 ### Fixed
