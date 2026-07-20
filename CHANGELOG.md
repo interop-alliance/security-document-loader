@@ -1,6 +1,6 @@
 # @interop/security-document-loader Changelog
 
-## 9.4.3 - 2026-07-19
+## 9.4.3-9.4.4 - 2026-07-19
 
 ### Changed
 - Update to latest `did-web-resolver@6.3.0` (allow did:web localhost http).
