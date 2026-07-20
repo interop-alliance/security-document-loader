@@ -39,11 +39,11 @@ importers:
         specifier: ^7.3.4
         version: 7.3.4
       '@interop/did-web-resolver':
-        specifier: ^6.2.4
-        version: 6.2.4
+        specifier: ^6.3.0
+        version: 6.3.0
       '@interop/ecdsa-multikey':
-        specifier: ^2.3.2
-        version: 2.3.2
+        specifier: ^2.3.3
+        version: 2.3.3
       '@interop/ed25519-verification-key':
         specifier: ^8.0.3
         version: 8.0.3
@@ -245,10 +245,6 @@ packages:
       react-native-get-random-values:
         optional: true
 
-  '@interop/data-integrity-core@8.2.0':
-    resolution: {integrity: sha512-T3ObUEH1+cEtKU8d0euDTMNrQiXZc5FZUP/T9sbc+wVo+bSBebnh9tUNLpDnqTGy1d6m/2C0JdrTbLnJNjgJCg==}
-    engines: {node: '>=24.0'}
-
   '@interop/data-integrity-core@8.3.0':
     resolution: {integrity: sha512-8rYHqCHbYub8hh16HvQrJ8ozXHhv+t/gC0f6/JN9CLOdyL3EUTZOyKHjOKDRaelxjIplQG61LIUxGL3ihF1aXQ==}
     engines: {node: '>=24.0'}
@@ -261,12 +257,12 @@ packages:
     resolution: {integrity: sha512-ejMNiUVZphaYyic1XCGw1JixPKZ6wj3nBDc+wDPVhiUHCuOduEq9+38+QWqw3nrRDyyilKiInLPTl0u9FlUwOg==}
     engines: {node: '>=24.0'}
 
-  '@interop/did-web-resolver@6.2.4':
-    resolution: {integrity: sha512-5TusTWI4Fuxa3HRtT6vmD/jsAciJ2YZ6/hGjFgkkb9G3LMkdChOYyrlc0okNfu27FsS4WiR4SqXo3UFkJNEI0A==}
+  '@interop/did-web-resolver@6.3.0':
+    resolution: {integrity: sha512-/P+5oxkpEvt4Xrh+BKz15KX/FMRrlcR//SzgBqwqaIeN6MyF2ceXe0AaZYIYDfxNhu5td3zYJ3i2BWFkNbJuAg==}
     engines: {node: '>=24.0'}
 
-  '@interop/ecdsa-multikey@2.3.2':
-    resolution: {integrity: sha512-trEcq2E3zSqIC7uubFyn29+oJV3fD7gxwJ2G6lfJKMYOQ5kSSelqC9SNvCYyp8I0hRI7GKM3dhEQDtuW0JVGTw==}
+  '@interop/ecdsa-multikey@2.3.3':
+    resolution: {integrity: sha512-BfLx0xA8YlkZXhF9tYIa0rS/hq5yNmIioSH5GorkTLXbHq7gVkNSWxr4cEw8C7BHAW9j/xMv0gzoEbfoQ8eLig==}
     engines: {node: '>=24.0'}
 
   '@interop/ed25519-verification-key@8.0.3':
@@ -1294,8 +1290,6 @@ snapshots:
     dependencies:
       '@scure/base': 2.2.0
 
-  '@interop/data-integrity-core@8.2.0': {}
-
   '@interop/data-integrity-core@8.3.0': {}
 
   '@interop/did-io@4.1.0':
@@ -1312,7 +1306,7 @@ snapshots:
     transitivePeerDependencies:
       - react-native-get-random-values
 
-  '@interop/did-web-resolver@6.2.4':
+  '@interop/did-web-resolver@6.3.0':
     dependencies:
       '@interop/bnid': 6.0.2
       '@interop/data-integrity-core': 8.3.0
@@ -1322,9 +1316,9 @@ snapshots:
     transitivePeerDependencies:
       - react-native-get-random-values
 
-  '@interop/ecdsa-multikey@2.3.2':
+  '@interop/ecdsa-multikey@2.3.3':
     dependencies:
-      '@interop/data-integrity-core': 8.2.0
+      '@interop/data-integrity-core': 8.3.0
       '@scure/base': 2.2.0
 
   '@interop/ed25519-verification-key@8.0.3':
