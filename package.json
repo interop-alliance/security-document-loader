@@ -50,7 +50,7 @@
     "@interop/ed25519-verification-key": "^8.0.3",
     "@interop/http-client": "^1.0.4",
     "aes-key-wrapping-2019-context": "^1.0.3",
-    "byoe-context": "^0.1.0",
+    "byoe-context": "^0.2.0",
     "credentials-context": "^2.0.0",
     "did-context": "^3.1.1",
     "ed25519-signature-2020-context": "^1.1.0",
