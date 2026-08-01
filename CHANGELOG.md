@@ -1,5 +1,11 @@
 # @interop/security-document-loader Changelog
 
+## 9.5.0 - TBD
+
+### Added
+- Add `byoe-context` (BYOE App Connect context, `https://w3id.org/byoe/app-connect/v1`)
+  to the default document loader.
+
 ## 9.4.3-9.4.4 - 2026-07-19
 
 ### Changed
