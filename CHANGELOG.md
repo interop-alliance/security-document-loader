@@ -1,6 +1,6 @@
 # @interop/security-document-loader Changelog
 
-## 9.5.1 - TBD
+## 9.5.1 - 2026-08-01
 
 ### Changed
 - Update to `byoe-context@0.2.0` (adds the `LoginCredential` and
