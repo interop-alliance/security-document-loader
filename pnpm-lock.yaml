@@ -53,6 +53,9 @@ importers:
       aes-key-wrapping-2019-context:
         specifier: ^1.0.3
         version: 1.0.3
+      byoe-context:
+        specifier: ^0.1.0
+        version: 0.1.0
       credentials-context:
         specifier: ^2.0.0
         version: 2.0.0
@@ -572,6 +575,10 @@ packages:
   brace-expansion@5.0.7:
     resolution: {integrity: sha512-7oFy703dxfY3/NLxC1fh2SUCQ0H9rmAY+5EpDVfXjUTTs+HEwR2nYaqLv+GWcTsumwxPfiz6CzCNkwXwBUwqCA==}
     engines: {node: 18 || 20 || >=22}
+
+  byoe-context@0.1.0:
+    resolution: {integrity: sha512-ruOKCF1uurOpI/C/KKwj6xiCSsvNIlsutBT2Uv8FpfUl64SYUUb8XTWnjx5XML9yBRT2KxWTbOye6HqDxWF5Wg==}
+    engines: {node: '>=24.0'}
 
   chai@6.2.2:
     resolution: {integrity: sha512-NUPRluOfOiTKBKvWPtSD4PhFvWCqOi0BGStNWs57X9js7XGTprSmFoz5F0tWhR4WPjNeR9jXqdC7/UpSJTnlRg==}
@@ -1618,6 +1625,8 @@ snapshots:
   brace-expansion@5.0.7:
     dependencies:
       balanced-match: 4.0.4
+
+  byoe-context@0.1.0: {}
 
   chai@6.2.2: {}
 
