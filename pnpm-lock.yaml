@@ -48,14 +48,11 @@ importers:
         specifier: ^8.0.3
         version: 8.0.3
       '@interop/http-client':
-        specifier: ^1.0.4
-        version: 1.0.4
+        specifier: ^1.0.5
+        version: 1.0.5
       aes-key-wrapping-2019-context:
         specifier: ^1.0.3
         version: 1.0.3
-      byoe-context:
-        specifier: ^0.2.0
-        version: 0.2.0
       credentials-context:
         specifier: ^2.0.0
         version: 2.0.0
@@ -279,6 +276,10 @@ packages:
 
   '@interop/http-client@1.0.4':
     resolution: {integrity: sha512-ceCNf8f7ktcMIyPILINzqrleejdzpIaFGoQKZYTWthIC0i1fxSBt5VHC7Sy8MmSomc3tPk2OMI7KqjnF3Ng/XQ==}
+    engines: {node: '>=22.12'}
+
+  '@interop/http-client@1.0.5':
+    resolution: {integrity: sha512-t/zL0+mQOjNkzj6usOv6MCOvG/HVOH1GG8Dbp03ympkf4NVOaJavBBJZuE05Xi1Sp4izmjHydDwnJLlzkZpzXQ==}
     engines: {node: '>=22.12'}
 
   '@interop/lru-memoize@4.0.3':
@@ -575,10 +576,6 @@ packages:
   brace-expansion@5.0.9:
     resolution: {integrity: sha512-ScQ4IuvIEF1TMlP7Zt+vjJ//9zlPb2SDcxWxM3bk8s6t6GGdJ7KO1dCcTidOPJKePW30LE/2cT7wCyPho9/Wxg==}
     engines: {node: 20 || >=22}
-
-  byoe-context@0.2.0:
-    resolution: {integrity: sha512-fp6X8+ly/3mAhFQxbvVAxhL4+P6JxpxtQ6rSaS6KpqUAy9O7aC8R5WnAUVz15+tCzj77ye9A3vMTpYcpYGFy7A==}
-    engines: {node: '>=24.0'}
 
   chai@6.2.2:
     resolution: {integrity: sha512-NUPRluOfOiTKBKvWPtSD4PhFvWCqOi0BGStNWs57X9js7XGTprSmFoz5F0tWhR4WPjNeR9jXqdC7/UpSJTnlRg==}
@@ -1340,6 +1337,11 @@ snapshots:
       ky: 1.14.3
       undici: 7.29.0
 
+  '@interop/http-client@1.0.5':
+    dependencies:
+      ky: 1.14.3
+      undici: 7.29.0
+
   '@interop/lru-memoize@4.0.3':
     dependencies:
       lru-cache: 11.5.2
@@ -1625,8 +1627,6 @@ snapshots:
   brace-expansion@5.0.9:
     dependencies:
       balanced-match: 4.0.4
-
-  byoe-context@0.2.0: {}
 
   chai@6.2.2: {}
 

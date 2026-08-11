@@ -21,13 +21,6 @@ describe('documentLoader', () => {
     expect(result.document).toStrictEqual(contextObject)
   })
 
-  it('includes the BYOE App Connect context', async () => {
-    const documentLoader = securityLoader().build()
-
-    const result = await documentLoader('https://w3id.org/byoe/app-connect/v1')
-    expect(result.document['@context'].AppKeyCredential).toBeDefined()
-  })
-
   it('resolves an ecdsa did:key verification method', async () => {
     // Mint an ECDSA P-256 did:key, then resolve its verification method id
     // through the loader. This is offline (no fetchRemoteContexts) and fails

@@ -20,7 +20,6 @@ import { JsonLdDocumentLoader } from 'jsonld-document-loader'
 import obContext from '@digitalcredentials/open-badges-context'
 import multikeyContext from '@digitalbazaar/multikey-context'
 import aesContext from 'aes-key-wrapping-2019-context'
-import * as byoeContext from 'byoe-context'
 import hmacContext from 'sha256-hmac-key-2019-context'
 import { httpClient } from '@interop/http-client'
 import type { IDocumentLoader } from '@interop/data-integrity-core/loader'
@@ -188,11 +187,6 @@ export function securityLoader({
     hmacContext.constants.CONTEXT_URL,
     hmacContext.contexts.get(hmacContext.constants.CONTEXT_URL)
   )
-
-  // BYOE (Bring Your Own Everything) App Connect Context
-  for (const [url, context] of byoeContext.contexts) {
-    loader.addStatic(url, context)
-  }
 
   // Open Badges v3 Contexts, includes OBv3 Beta, 3.0, 3.0.1, 3.0.2, etc.
   for (const [url, context] of obContext.contexts) {

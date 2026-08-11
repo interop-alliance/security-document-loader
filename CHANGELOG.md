@@ -1,5 +1,15 @@
 # @interop/security-document-loader Changelog
 
+## 10.0.0 - TBD
+
+### Removed
+
+- **BREAKING**: Remove the `byoe-context` (BYOE App Connect,
+  `https://w3id.org/byoe/app-connect/v1`) context from the default loader.
+  Consumers that need it register it themselves before building:
+  `for (const [url, context] of byoeContext.contexts) loader.addStatic(url, context)`.
+  This keeps BYOE vocabulary additions from forcing a release of this package.
+
 ## 9.5.1 - 2026-08-01
 
 ### Changed

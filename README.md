@@ -42,7 +42,6 @@ The default loader bundles the following contexts (registered in
 | Multikey                              | `@digitalbazaar/multikey-context`                 | `https://w3id.org/security/multikey/v1`                                                        |
 | AES Key Wrapping 2019                 | `aes-key-wrapping-2019-context`                   | `https://w3id.org/security/suites/aes-2019/v1`                                                 |
 | SHA-256 HMAC Key 2019                 | `sha256-hmac-key-2019-context`                    | `https://w3id.org/security/suites/hmac-2019/v1`                                                |
-| BYOE App Connect                      | `byoe-context`                                    | `https://w3id.org/byoe/app-connect/v1`                                                         |
 | Open Badges v3                        | `@digitalcredentials/open-badges-context`         | `https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json` (and prior 3.0.x / beta versions) |
 
 ## Install
