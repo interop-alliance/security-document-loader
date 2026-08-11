@@ -1,6 +1,6 @@
 # @interop/security-document-loader Changelog
 
-## 10.0.0 - TBD
+## 10.0.0 - 2026-08-10
 
 ### Removed
 
