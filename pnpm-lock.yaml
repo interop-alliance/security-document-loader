@@ -33,11 +33,11 @@ importers:
         specifier: ^8.7.1
         version: 8.7.1
       '@interop/did-io':
-        specifier: ^4.1.0
-        version: 4.1.0
+        specifier: ^4.1.1
+        version: 4.1.1
       '@interop/did-method-key':
-        specifier: ^7.3.4
-        version: 7.3.4
+        specifier: ^7.3.5
+        version: 7.3.5
       '@interop/did-web-resolver':
         specifier: ^6.3.0
         version: 6.3.0
@@ -45,8 +45,8 @@ importers:
         specifier: ^2.3.3
         version: 2.3.3
       '@interop/ed25519-verification-key':
-        specifier: ^8.0.3
-        version: 8.0.3
+        specifier: ^8.0.4
+        version: 8.0.4
       '@interop/http-client':
         specifier: ^1.0.5
         version: 1.0.5
@@ -257,8 +257,12 @@ packages:
     resolution: {integrity: sha512-LVj9Y6DKiaUKu+lSNhcfd9k0vPakadyczSdnqZEfsjtF911rIJInAWxJlQJ+oRKZbGNu+zTXER2AfyzzfCVl9g==}
     engines: {node: '>=24.0'}
 
-  '@interop/did-method-key@7.3.4':
-    resolution: {integrity: sha512-ejMNiUVZphaYyic1XCGw1JixPKZ6wj3nBDc+wDPVhiUHCuOduEq9+38+QWqw3nrRDyyilKiInLPTl0u9FlUwOg==}
+  '@interop/did-io@4.1.1':
+    resolution: {integrity: sha512-uD5cnRLoDq5TJWNYASv3HomQXr2xW2TanQZ13TPcmRRo+r8QGPn/DY10kiXw+FYArrUorn8xxjsSSw7C2zS94w==}
+    engines: {node: '>=24.0'}
+
+  '@interop/did-method-key@7.3.5':
+    resolution: {integrity: sha512-gJqAjJFW+PgNxwGpLVTisYENxNrZicyUGVhiHKIt02qcgSJZxS6XH/i9FtNoOLqD3uhc2cpwLzC+fdQTHZQPhA==}
     engines: {node: '>=24.0'}
 
   '@interop/did-web-resolver@6.3.0':
@@ -269,8 +273,8 @@ packages:
     resolution: {integrity: sha512-BfLx0xA8YlkZXhF9tYIa0rS/hq5yNmIioSH5GorkTLXbHq7gVkNSWxr4cEw8C7BHAW9j/xMv0gzoEbfoQ8eLig==}
     engines: {node: '>=24.0'}
 
-  '@interop/ed25519-verification-key@8.0.3':
-    resolution: {integrity: sha512-2RfyzZ9QyrdhVF994uylNacBu0apZwNlgIMFvCIni/CrJQHsMkX6MhzbXxenTuUNexTDpXPN3wFwDUT9jD4T2w==}
+  '@interop/ed25519-verification-key@8.0.4':
+    resolution: {integrity: sha512-Rban9niHY+MJSj3xrgsOmhYIzHz1TjmCsqOrrsyKr+Uk+xNwK1P9QA7RoR7wwjZ98o1rkD0wTl23wga81oY7hw==}
     engines: {node: '>=20'}
     peerDependencies:
       react-native-get-random-values: '>=1.8.0'
@@ -1312,12 +1316,17 @@ snapshots:
       '@interop/data-integrity-core': 8.4.0
       '@interop/lru-memoize': 4.0.3
 
-  '@interop/did-method-key@7.3.4':
+  '@interop/did-io@4.1.1':
+    dependencies:
+      '@interop/data-integrity-core': 8.7.1
+      '@interop/lru-memoize': 4.0.3
+
+  '@interop/did-method-key@7.3.5':
     dependencies:
       '@digitalbazaar/x25519-key-agreement-key-2020': 3.0.1
-      '@interop/data-integrity-core': 8.4.0
-      '@interop/did-io': 4.1.0
-      '@interop/ed25519-verification-key': 8.0.3
+      '@interop/data-integrity-core': 8.7.1
+      '@interop/did-io': 4.1.1
+      '@interop/ed25519-verification-key': 8.0.4
     transitivePeerDependencies:
       - react-native-get-random-values
 
@@ -1336,12 +1345,12 @@ snapshots:
       '@interop/data-integrity-core': 8.4.0
       '@scure/base': 2.2.0
 
-  '@interop/ed25519-verification-key@8.0.3':
+  '@interop/ed25519-verification-key@8.0.4':
     dependencies:
-      '@interop/data-integrity-core': 8.4.0
+      '@interop/data-integrity-core': 8.7.1
       '@noble/ed25519': 3.1.0
       '@noble/hashes': 2.2.0
-      '@scure/base': 2.2.0
+      '@scure/base': 2.3.0
 
   '@interop/http-client@1.0.4':
     dependencies:
