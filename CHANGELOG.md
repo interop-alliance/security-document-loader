@@ -1,6 +1,6 @@
 # @interop/security-document-loader Changelog
 
-## 10.0.3 - 2026-08-18
+## 10.0.3-10.0.4 - 2026-08-18
 
 - Update to latest ecdsa-multikey.
 
