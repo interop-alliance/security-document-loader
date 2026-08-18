@@ -1,6 +1,6 @@
 # @interop/security-document-loader Changelog
 
-## 10.0.2 - TBD
+## 10.0.2 - 2026-08-18
 
 ### Changed
 
