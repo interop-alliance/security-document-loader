@@ -1,5 +1,13 @@
 # @interop/security-document-loader Changelog
 
+## 10.1.0 - TBD
+
+### Added
+
+- `createDefaultDidResolver(options)` passes `options` through to the
+  `CachedResolver` constructor, so a consumer can size the result cache or
+  supply its own `cache` implementation.
+
 ## 10.0.3-10.0.4 - 2026-08-18
 
 - Update to latest ecdsa-multikey.

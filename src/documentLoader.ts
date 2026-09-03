@@ -62,10 +62,18 @@ export function registerDefaultDidKeyHeaders(
  * `securityLoader({ didResolver })` -- keeping method-specific dependencies out
  * of this package.
  *
+ * `options` are passed straight through to the `CachedResolver` constructor,
+ * so a consumer can size its result cache (`max` / `ttl`) or supply its own
+ * `cache` (anything with a `memoize({ key, fn })`), e.g. a pass-through when
+ * resolved documents are already memoized elsewhere with proper invalidation.
+ *
+ * @param [options] {ConstructorParameters<typeof CachedResolver>[0]}
  * @returns {CachedResolver}
  */
-export function createDefaultDidResolver(): CachedResolver {
-  const resolver = new CachedResolver()
+export function createDefaultDidResolver(
+  options: ConstructorParameters<typeof CachedResolver>[0] = {}
+): CachedResolver {
+  const resolver = new CachedResolver(options)
   const didKeyDriver = driver()
   const didWebDriver = didWeb.driver()
   resolver.use(didKeyDriver)
