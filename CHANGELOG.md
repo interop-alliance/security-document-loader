@@ -1,5 +1,11 @@
 # @interop/security-document-loader Changelog
 
+## 10.1.1 - TBD
+
+### Changed
+
+- Update to latest did-method-key and ed25519-verification-key deps.
+
 ## 10.1.0 - 2026-09-03
 
 ### Added

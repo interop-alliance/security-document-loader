@@ -36,17 +36,17 @@ importers:
         specifier: ^4.1.1
         version: 4.1.1
       '@interop/did-method-key':
-        specifier: ^7.3.5
-        version: 7.3.5
+        specifier: ^7.4.0
+        version: 7.4.0
       '@interop/did-web-resolver':
         specifier: ^6.3.1
         version: 6.3.1
       '@interop/ecdsa-multikey':
-        specifier: ^2.3.4
-        version: 2.3.4
+        specifier: ^2.4.0
+        version: 2.4.0
       '@interop/ed25519-verification-key':
-        specifier: ^8.0.4
-        version: 8.0.4
+        specifier: ^8.1.0
+        version: 8.1.0
       '@interop/http-client':
         specifier: ^1.0.5
         version: 1.0.5
@@ -153,10 +153,6 @@ packages:
   '@digitalbazaar/vc-status-list-context@3.1.1':
     resolution: {integrity: sha512-cMVtd+EV+4KN2kUG4/vsV74JVsGE6dcpod6zRoFB/AJA2W/sZbJqR44KL3G6P262+GcAECNhtnSsKsTnQ6y8+w==}
 
-  '@digitalbazaar/x25519-key-agreement-key-2020@3.0.1':
-    resolution: {integrity: sha512-GmpPEc3ZD/7fz3St38ELa8qgJzjfTxCJi7cwAYPAcZ8Iynldj8sSf2hIblYjjlB82pIENhyXLQHcIALluGcrqA==}
-    engines: {node: '>=14'}
-
   '@digitalbazaar/zcap-context@2.0.1':
     resolution: {integrity: sha512-H+5O2QP5XJZuP8D4T2hZStxK3+ynu/yamvQKUTVNTiqAXeWshmEthSTMrX8aS5edgOtJjvdNUNuJ5mePW/DPcQ==}
     engines: {node: '>=18'}
@@ -244,20 +240,20 @@ packages:
     resolution: {integrity: sha512-uD5cnRLoDq5TJWNYASv3HomQXr2xW2TanQZ13TPcmRRo+r8QGPn/DY10kiXw+FYArrUorn8xxjsSSw7C2zS94w==}
     engines: {node: '>=24.0'}
 
-  '@interop/did-method-key@7.3.5':
-    resolution: {integrity: sha512-gJqAjJFW+PgNxwGpLVTisYENxNrZicyUGVhiHKIt02qcgSJZxS6XH/i9FtNoOLqD3uhc2cpwLzC+fdQTHZQPhA==}
+  '@interop/did-method-key@7.4.0':
+    resolution: {integrity: sha512-fYwGYiRTBEFuCiY2sw0wvlj6M6w2ceXGDPkNESqSmHODdor1ngdbBvej7XClAU8WMzZMjQjiNyLk3bqHoCh7DA==}
     engines: {node: '>=24.0'}
 
   '@interop/did-web-resolver@6.3.1':
     resolution: {integrity: sha512-Qpa4kNUOpygwOUTOtM7Eg33Z6uE+2CQSWzw+q5bBcwKVb4edhnwLVUCz6U/7IBQRXKxQnoukMYPrhhXj/mQr9A==}
     engines: {node: '>=24.0'}
 
-  '@interop/ecdsa-multikey@2.3.4':
-    resolution: {integrity: sha512-6Xsxqoe4aWEOWaFytS4AX2opNbrhd4bi4JMqNQkIIDs7dCLqqNGbX4UhG9jjoHS1p666dWaa4xO6GWMEQ9aJZQ==}
+  '@interop/ecdsa-multikey@2.4.0':
+    resolution: {integrity: sha512-uR7L3MrPKZxMV5EEMsQxH3TCy0436Q+JgUaNIthe2e0VgsNo/YK7q+w9nSxjYEole4TcYonbbbROXwEKBJGePA==}
     engines: {node: '>=24.0'}
 
-  '@interop/ed25519-verification-key@8.0.4':
-    resolution: {integrity: sha512-Rban9niHY+MJSj3xrgsOmhYIzHz1TjmCsqOrrsyKr+Uk+xNwK1P9QA7RoR7wwjZ98o1rkD0wTl23wga81oY7hw==}
+  '@interop/ed25519-verification-key@8.1.0':
+    resolution: {integrity: sha512-kj8aYyTTxBofETxKmKDbrjXyAHAsXLxnfMLwumu2BYjPfwKBN8QxUkEeeKa0x1wovGIefcTAsuASGMYC4Y2TUg==}
     engines: {node: '>=20'}
     peerDependencies:
       react-native-get-random-values: '>=1.8.0'
@@ -273,6 +269,10 @@ packages:
     resolution: {integrity: sha512-6c8dnoQNIiL25Q4YovC1a44mREO1lzW3F/lmvdwbAMMbhtGGRoQeqo1H4diwNhBzaxRrUMXrAIwbM26POmI/Yg==}
     engines: {node: '>=24.0'}
 
+  '@interop/x25519-key-agreement-key@5.3.0':
+    resolution: {integrity: sha512-c/DXLw0kBGICScAw/5Pk6rn9dzjk9tl6Jl9f6yoOle5I7+8998TqaDkVQkMO0TsEf2/XAPcu61VThnJCC++zFQ==}
+    engines: {node: '>=24.0'}
+
   '@jridgewell/resolve-uri@3.1.2':
     resolution: {integrity: sha512-bRISgCIjP20/tbWSPWMEi54QVPRZExkuD9lJL+UIxUKtwVJA8wW1Trb1jMs1RFXo1CBTNZ/5hpC9QvmKWdopKw==}
     engines: {node: '>=6.0.0'}
@@ -283,14 +283,19 @@ packages:
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
 
-  '@noble/ed25519@1.7.5':
-    resolution: {integrity: sha512-xuS0nwRMQBvSxDa7UxMb61xTiH3MxTgUfhyPUALVIe0FlOAz4sjELwyDRyUvqeEYfRSG9qNjFIycqLZppg4RSA==}
+  '@noble/curves@2.4.0':
+    resolution: {integrity: sha512-P4/62zrgfH33CneE3Dn4WhJVA22YUU0eR51wKIan4NVRvwsA0YnPTwWGpNbpuacSujmSFLvyzpyuR30+fbq2Ew==}
+    engines: {node: '>= 20.19.0'}
 
   '@noble/ed25519@3.1.0':
     resolution: {integrity: sha512-pfcObRY3CtvwfaG9Mt5XqZdKmAQppl37tHUeuBhDUbiwJBCVY4/A4lbMvb1xKhMDx96AqAqZpMWuBX1HulhX4g==}
 
   '@noble/hashes@2.3.0':
     resolution: {integrity: sha512-oN+QwyX7VSHotibwubG3kpzbwKrfnyR6OOO+3Nk/53ADL7FmgHHz4TgrbaYKvvOw09u6QTx0oiH1cNCIOuN0CQ==}
+    engines: {node: '>= 20.19.0'}
+
+  '@noble/hashes@2.4.0':
+    resolution: {integrity: sha512-X5XaVWZIBCT7HHZGm5I7ZQXDwLG+bGXuSrMQAW+7Zvl87h1kmc1ZB1VSRJcpUfoUrGQp4Fkoxm5kZ+Ms+aW+eA==}
     engines: {node: '>= 20.19.0'}
 
   '@oxc-project/types@0.144.0':
@@ -542,10 +547,6 @@ packages:
     resolution: {integrity: sha512-BLrgEcRTwX2o6gGxGOCNyMvGSp35YofuYzw9h1IMTRmKqttAZZVU67bdb9Pr2vUHA8+j3i2tJfjO6C6+4myGTA==}
     engines: {node: 18 || 20 || >=22}
 
-  base58-universal@2.0.0:
-    resolution: {integrity: sha512-BgkgF8zVLOAygszG4W8NkLm7iXrw80VYAOcedrzANrIhS14+4W6zVqjyGTFUBM/FpqkHUt8aAYd4DbBBfn3zKg==}
-    engines: {node: '>=14'}
-
   brace-expansion@5.0.9:
     resolution: {integrity: sha512-ScQ4IuvIEF1TMlP7Zt+vjJ//9zlPb2SDcxWxM3bk8s6t6GGdJ7KO1dCcTidOPJKePW30LE/2cT7wCyPho9/Wxg==}
     engines: {node: 20 || >=22}
@@ -563,10 +564,6 @@ packages:
   cross-spawn@7.0.6:
     resolution: {integrity: sha512-uV2QOWP2nWzsy2aMp8aRibhi9dlzF5Hgh5SHaB9OiTGEyDTiJJyx0uy51QXdyWbtAHNua4XJzUKca3OzKUd3vA==}
     engines: {node: '>= 8'}
-
-  crypto-ld@7.0.0:
-    resolution: {integrity: sha512-RrXy6aB0TOhSiqsgavTQt1G8mKomKIaNLb2JZxj7A/Vi0EwmXguuBQoeiAvePfK6bDR3uQbqYnaLLs4irTWwgw==}
-    engines: {node: '>=14'}
 
   debug@4.4.3:
     resolution: {integrity: sha512-RGwwWnwQvkVfavKVt22FGLw+xYSdzARwm0ru6DhTVA3umU5hZc28V3kO4stgYryrTlLpuvgI9GiijltAjNbcqA==}
@@ -1022,9 +1019,6 @@ packages:
     peerDependencies:
       typescript: '>=4.8.4'
 
-  tweetnacl@1.0.3:
-    resolution: {integrity: sha512-6rt+RN7aOi1nGMyC4Xa5DdYiukl2UWCbcJft7YhxReBGQD7OAM8Pbxw6YMo4r2diNEA8FEmu32YOn9rhaiE5yw==}
-
   type-check@0.4.0:
     resolution: {integrity: sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==}
     engines: {node: '>= 0.8.0'}
@@ -1181,13 +1175,6 @@ snapshots:
 
   '@digitalbazaar/vc-status-list-context@3.1.1': {}
 
-  '@digitalbazaar/x25519-key-agreement-key-2020@3.0.1':
-    dependencies:
-      '@noble/ed25519': 1.7.5
-      base58-universal: 2.0.0
-      crypto-ld: 7.0.0
-      tweetnacl: 1.0.3
-
   '@digitalbazaar/zcap-context@2.0.1': {}
 
   '@digitalcredentials/credentials-v2-context@1.0.0': {}
@@ -1257,12 +1244,12 @@ snapshots:
       '@interop/data-integrity-core': 8.7.1
       '@interop/lru-memoize': 4.0.3
 
-  '@interop/did-method-key@7.3.5':
+  '@interop/did-method-key@7.4.0':
     dependencies:
-      '@digitalbazaar/x25519-key-agreement-key-2020': 3.0.1
       '@interop/data-integrity-core': 8.7.1
       '@interop/did-io': 4.1.1
-      '@interop/ed25519-verification-key': 8.0.4
+      '@interop/ed25519-verification-key': 8.1.0
+      '@interop/x25519-key-agreement-key': 5.3.0
     transitivePeerDependencies:
       - react-native-get-random-values
 
@@ -1276,12 +1263,12 @@ snapshots:
     transitivePeerDependencies:
       - react-native-get-random-values
 
-  '@interop/ecdsa-multikey@2.3.4':
+  '@interop/ecdsa-multikey@2.4.0':
     dependencies:
       '@interop/data-integrity-core': 8.7.1
       '@scure/base': 2.3.0
 
-  '@interop/ed25519-verification-key@8.0.4':
+  '@interop/ed25519-verification-key@8.1.0':
     dependencies:
       '@interop/data-integrity-core': 8.7.1
       '@noble/ed25519': 3.1.0
@@ -1297,6 +1284,12 @@ snapshots:
     dependencies:
       lru-cache: 11.5.2
 
+  '@interop/x25519-key-agreement-key@5.3.0':
+    dependencies:
+      '@interop/data-integrity-core': 8.7.1
+      '@noble/curves': 2.4.0
+      '@scure/base': 2.3.0
+
   '@jridgewell/resolve-uri@3.1.2': {}
 
   '@jridgewell/sourcemap-codec@1.5.5': {}
@@ -1306,11 +1299,15 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
 
-  '@noble/ed25519@1.7.5': {}
+  '@noble/curves@2.4.0':
+    dependencies:
+      '@noble/hashes': 2.4.0
 
   '@noble/ed25519@3.1.0': {}
 
   '@noble/hashes@2.3.0': {}
+
+  '@noble/hashes@2.4.0': {}
 
   '@oxc-project/types@0.144.0': {}
 
@@ -1554,8 +1551,6 @@ snapshots:
 
   balanced-match@4.0.4: {}
 
-  base58-universal@2.0.0: {}
-
   brace-expansion@5.0.9:
     dependencies:
       balanced-match: 4.0.4
@@ -1571,8 +1566,6 @@ snapshots:
       path-key: 3.1.1
       shebang-command: 2.0.0
       which: 2.0.2
-
-  crypto-ld@7.0.0: {}
 
   debug@4.4.3:
     dependencies:
@@ -1960,8 +1953,6 @@ snapshots:
   ts-api-utils@2.5.0(typescript@5.9.3):
     dependencies:
       typescript: 5.9.3
-
-  tweetnacl@1.0.3: {}
 
   type-check@0.4.0:
     dependencies:
