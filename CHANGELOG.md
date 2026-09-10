@@ -1,5 +1,11 @@
 # @interop/security-document-loader Changelog
 
+## 10.1.2 - TBD
+
+### Changed
+
+- Update to latest ed25519 key dep (`didKeySigner()`).
+
 ## 10.1.1 - 2026-09-05
 
 ### Changed
