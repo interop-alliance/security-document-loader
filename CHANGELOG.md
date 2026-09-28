@@ -1,5 +1,10 @@
 # @interop/security-document-loader Changelog
 
+## 10.1.4 - TBD
+
+### Changed
+- Update to latest did-io.
+
 ## 10.1.3 - 2026-09-25
 
 ### Changed
