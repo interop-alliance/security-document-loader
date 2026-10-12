@@ -1,6 +1,6 @@
 # @interop/security-document-loader Changelog
 
-## 10.1.6 - TBD
+## 10.1.6 - 2026-10-12
 
 ### Changed
 - Update to latest did-web-resolver (export fetch doc).
