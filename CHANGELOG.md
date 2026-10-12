@@ -1,5 +1,10 @@
 # @interop/security-document-loader Changelog
 
+## 10.1.5 - TBD
+
+### Changed
+- Update to latest data-integrity-core and jsigs.
+
 ## 10.1.4 - 2026-09-28
 
 ### Changed
